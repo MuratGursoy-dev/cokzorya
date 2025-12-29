@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>464</width>
+    <height>507</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>YENİ ÜYE KAYIT</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Ana Pencere - Derin Karanlık */
+QDialog {
+    background-color: #0f0c29;
+}
+
+/* Başlıklar (Ad, Tel, Şifre) - NEON MAVİ */
+QLabel {
+    color: #00d2ff;
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px; /* Kutuyla yazı birbirine yapışmasın */
+    qproperty-alignment: AlignCenter; /* Yazıları ortala */
+}
+
+/* Kutular (Inputlar) - MOR HAP TASARIMI */
+QLineEdit {
+    background-color: #1a1a2e; /* Koyu zemin */
+    color: #ffffff; /* Beyaz yazı */
+    border: 2px solid #4b0082; /* Mor çerçeve */
+    border-radius: 15px; /* Yuvarlak köşeler */
+    padding: 8px;
+    font-size: 14px;
+    min-height: 30px; /* Kutular dolgun olsun */
+}
+
+QLineEdit:focus {
+    border: 2px solid #ff00cc; /* Tıklayınca Pembe yanar */
+    background-color: #240046;
+}
+
+/* Kayıt Butonu - YEŞİL / SİYAH */
+QPushButton {
+    background-color: #1a1a2e;
+    color: #00ff00; /* Neon Yeşil Yazı */
+    border: 2px solid #00ff00;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+    min-height: 45px;
+}
+
+QPushButton:hover {
+    background-color: #00ff00; /* Üzerine gelince içi yeşil dolsun */
+    color: #000000; /* Yazı siyah olsun */
+    box-shadow: 0 0 15px #00ff00; /* Parlama efekti */
+}
+/* --- YENİ EKLENEN BAŞLIK AYARI --- */
+QLabel#lbl_baslik {
+    color: #ff00cc; /* Neon Pembe */
+    font-family: &quot;Impact&quot;; /* Veya kalın bir font */
+    font-size: 28px;
+    letter-spacing: 3px; /* Harfleri ayır */
+    margin-bottom: 20px; /* Alttakilere yapışmasın */
+    background-color: transparent;
+    border: none;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>50</number>
+   </property>
+   <property name="topMargin">
+    <number>50</number>
+   </property>
+   <property name="rightMargin">
+    <number>50</number>
+   </property>
+   <property name="bottomMargin">
+    <number>50</number>
+   </property>
+   <property name="spacing">
+    <number>30</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QLabel" name="lbl_baslik">
+       <property name="text">
+        <string>YENİ ÜYE KAYDI</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>AD-SOYAD</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="txt_yeni_ad"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>TELEFON NO</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="txt_yeni_tel"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>ŞİFRE</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="txt_yeni_sifre"/>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_kaydet">
+       <property name="text">
+        <string>KAYIT OL</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

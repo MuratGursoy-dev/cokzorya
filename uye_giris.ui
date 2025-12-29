@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialog</class>
+ <widget class="QDialog" name="dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>704</width>
+    <height>409</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ÜYE GİRŞİ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Ana Pencere - Karanlık Mod */
+QDialog {
+    background-color: #0f0c29; /* Derin Mor/Siyah */
+}
+
+/* Başlık ve Etiketler */
+QLabel {
+    color: #00d2ff; /* Neon Mavi */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın ve Havalı */
+    font-size: 16px;
+    qproperty-alignment: AlignCenter; /* Ortala */
+}
+
+/* En Tepedeki &quot;ÜYE GİRİŞİ&quot; Yazısı için Özel Ayar */
+/* (Eğer objectName'i 'label' ise genel ayar yeter, ama başlık daha büyük olsun dersen:) */
+QLabel#label {
+    font-size: 24px;
+    color: #ff00cc; /* Neon Pembe */
+    margin-bottom: 20px;
+}
+
+/* Giriş Kutuları (Inputlar) */
+QLineEdit {
+    background-color: #1a1a2e; /* Koyu zemin */
+    color: #ffffff; /* Beyaz yazı */
+    border: 2px solid #4b0082; /* Mor çerçeve */
+    border-radius: 20px; /* Tam oval (hap gibi) */
+    padding: 10px;
+    font-size: 15px;
+    selection-background-color: #ff00cc;
+}
+
+QLineEdit:focus {
+    border: 2px solid #00d2ff; /* Tıklayınca Mavi Yansın */
+    background-color: #240046; /* Hafif aydınlansın */
+}
+
+/* Giriş Butonu */
+QPushButton {
+    background-color: #1a1a2e;
+    color: #00ff00; /* Neon Yeşil */
+    border: 2px solid #00ff00;
+    border-radius: 20px; /* Yuvarlak buton */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px;
+}
+
+QPushButton:hover {
+    background-color: #00ff00; /* Üzerine gelince yeşil olsun */
+    color: #000000; /* Yazı siyah olsun */
+    box-shadow: 0 0 15px #00ff00; /* (Destekliyorsa) Parlama */
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>35</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>191</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>ÜYE GİRİŞİ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Telefon Nımarası:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txt_tel">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Şifre:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="txt_sifre">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btn_giris_yap">
+          <property name="text">
+           <string>Giriş Yap ve Oturumu Başlat</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>190</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="2">
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>35</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

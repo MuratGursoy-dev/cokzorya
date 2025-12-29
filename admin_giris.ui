@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>519</width>
+    <height>304</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Ana Pencere - Derin Mor/Siyah */
+QDialog {
+    background-color: #0f0c29;
+}
+
+/* Başlık (YÖNETİCİ) - NEON PEMBE */
+QLabel {
+    color: #ff00cc; 
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 22px;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+    margin-bottom: 10px;
+}
+
+/* Kutular (Kullanıcı Adı &amp; Şifre) */
+QLineEdit {
+    background-color: #1a1a2e; 
+    color: #ffffff; 
+    border: 2px solid #4b0082; /* Koyu Mor Çerçeve */
+    border-radius: 15px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+QLineEdit:focus {
+    border: 2px solid #00d2ff; /* Tıklayınca Mavi Yansın */
+    background-color: #240046;
+}
+
+/* Giriş Butonu - YEŞİL ÇERÇEVE */
+QPushButton {
+    background-color: #1a1a2e;
+    color: #00ff00; /* Yazısı Neon Yeşil */
+    border: 2px solid #00ff00; 
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+}
+
+QPushButton:hover {
+    background-color: #00ff00; 
+    color: #000000; 
+    box-shadow: 0 0 15px #00ff00; /* Parlama efekti */
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>70</number>
+   </property>
+   <property name="topMargin">
+    <number>20</number>
+   </property>
+   <property name="rightMargin">
+    <number>70</number>
+   </property>
+   <property name="bottomMargin">
+    <number>40</number>
+   </property>
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>YÖNETİCİ GİRİŞİ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_kadi"/>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_sifre">
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_giris">
+       <property name="text">
+        <string>Giriş Yap</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>458</width>
+    <height>236</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MASA İŞLEMLERİ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Ana Pencere - Karanlık Mod */
+QDialog {
+    background-color: #0f0c29;
+}
+
+/* Başlık Yazısı */
+QLabel {
+    color: white;
+    font-family: &quot;Segoe UI Black&quot;; /* Çok kalın font */
+    font-size: 22px;
+    qproperty-alignment: AlignCenter;
+    margin-bottom: 20px; /* Butonlardan biraz uzak dursun */
+}
+
+/* GENEL BUTON AYARLARI */
+QPushButton {
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    min-width: 120px;
+}
+
+/* ÜYE GİRİŞİ BUTONU (Özel - Altın/Sarı) */
+QPushButton#btn_uye {
+    color: #ffd700;
+    border: 3px solid #ffd700;
+}
+QPushButton#btn_uye:hover {
+    background-color: #ffd700;
+    color: black;
+    box-shadow: 0 0 15px #ffd700; /* Parlama efekti */
+}
+
+/* NORMAL GİRİŞ BUTONU (Standart - Neon Mavi) */
+QPushButton#btn_normal {
+    color: #00d2ff;
+    border: 3px solid #00d2ff;
+}
+QPushButton#btn_normal:hover {
+    background-color: #00d2ff;
+    color: black;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="lbl_baslik">
+       <property name="text">
+        <string>MASA İŞLEMLERİ</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btn_uye">
+         <property name="text">
+          <string>Üye Girişi</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_normal">
+         <property name="text">
+          <string>Normal Giriş</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

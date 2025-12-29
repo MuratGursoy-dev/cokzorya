@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1136</width>
+    <height>757</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    /* Çok koyu, derin bir gece mavisi/mor karışımı */
+    background-color: #0f0c29; 
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="sol_panel">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* Sadece ismi &quot;sol_panel&quot; olan kutuyu boya, içindekilere dokunma */
+QFrame#sol_panel {
+    background-color: #050510;
+    border-right: 2px solid #ff00cc; /* Neon Pembe Çizgi */
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>25</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>200</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../../Downloads/game.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Impact,Arial Black</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="focusPolicy">
+            <enum>Qt::StrongFocus</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel {
+    /* Göz alan parlak bir fuşya/pembe */
+    color: #ff00cc; 
+    /* Varsa &quot;Impact&quot; yoksa kalın bir font */
+    font-family: &quot;Impact&quot;, &quot;Arial Black&quot;; 
+    font-size: 36px; /* Kocaman olsun */
+    text-transform: uppercase; /* Hepsi BÜYÜK HARF */
+    letter-spacing: 4px; /* Harfler ayrılsın, havalı dursun */
+    qproperty-alignment: AlignCenter;
+}</string>
+           </property>
+           <property name="text">
+            <string>WMG CAFE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_ayarlar">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent; /* Şeffaf */
+    color: white;  /* BEMBEYAZ YAZI */
+    font-weight: bold; /* KALIN */
+    font-size: 15px;
+    font-family: &quot;Segoe UI&quot;;
+    text-align: left; /* Sola yaslı */
+    padding-left: 20px;
+    border: none;
+    border-left: 4px solid transparent; /* Sol çizgi yerini hazırla */
+}
+
+QPushButton:hover {
+    color: #00d2ff; /* Üzerine gelince NEON MAVİ */
+    background-color: rgba(255, 255, 255, 0.1); /* Hafif aydınlanma */
+    border-left: 4px solid #00d2ff; /* Sol tarafta mavi çizgi çıksın */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>AYARLAR</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_uye_kayit">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent; /* Şeffaf */
+    color: white;  /* BEMBEYAZ YAZI */
+    font-weight: bold; /* KALIN */
+    font-size: 15px;
+    font-family: &quot;Segoe UI&quot;;
+    text-align: left; /* Sola yaslı */
+    padding-left: 20px;
+    border: none;
+    border-left: 4px solid transparent; /* Sol çizgi yerini hazırla */
+}
+
+QPushButton:hover {
+    color: #00d2ff; /* Üzerine gelince NEON MAVİ */
+    background-color: rgba(255, 255, 255, 0.1); /* Hafif aydınlanma */
+    border-left: 4px solid #00d2ff; /* Sol tarafta mavi çizgi çıksın */
+}</string>
+           </property>
+           <property name="text">
+            <string>ÜYE KAYIT</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_siparis_ekle">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent; /* Şeffaf */
+    color: white;  /* BEMBEYAZ YAZI */
+    font-weight: bold; /* KALIN */
+    font-size: 15px;
+    font-family: &quot;Segoe UI&quot;;
+    text-align: left; /* Sola yaslı */
+    padding-left: 20px;
+    border: none;
+    border-left: 4px solid transparent; /* Sol çizgi yerini hazırla */
+}
+
+QPushButton:hover {
+    color: #00d2ff; /* Üzerine gelince NEON MAVİ */
+    background-color: rgba(255, 255, 255, 0.1); /* Hafif aydınlanma */
+    border-left: 4px solid #00d2ff; /* Sol tarafta mavi çizgi çıksın */
+}
+</string>
+           </property>
+           <property name="text">
+            <string>SİPARİŞ EKLE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #404040;
+    color: white;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #505050;
+}
+QPushButton:hover {
+    background-color: #505050;
+    border: 2px solid #00aaff; /* Üzerine gelince mavi kenarlık */
+}
+QPushButton:pressed {
+    background-color: #202020;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="3">
+        <widget class="QPushButton" name="btn_vip_4">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2e1a1a; /* İçi koyu kırmızımsı */
+    color: #ff9f43; /* Yazılar NEON TURUNCU/AMBER */
+    border: 3px solid #ff9f43; /* Kenarlık AMBER */
+    border-radius: 12px;
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #ff9f43; /* Üzerine gelince içi dolsun */
+    color: #2e1a1a; /* Yazı koyulaşsın */
+    border: 3px solid #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>VİP ODA 4</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/crown.png</normaloff>../../Downloads/crown.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="btn_masa_8">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 8</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btn_vip_1">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2e1a1a; /* İçi koyu kırmızımsı */
+    color: #ff9f43; /* Yazılar NEON TURUNCU/AMBER */
+    border: 3px solid #ff9f43; /* Kenarlık AMBER */
+    border-radius: 12px;
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #ff9f43; /* Üzerine gelince içi dolsun */
+    color: #2e1a1a; /* Yazı koyulaşsın */
+    border: 3px solid #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>VİP ODA 1</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/crown.png</normaloff>../../Downloads/crown.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="btn_masa_7">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 7</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_masa_2">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 2</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QPushButton" name="btn_masa_4">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 4</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QPushButton" name="btn_masa_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 3</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn_masa_6">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 6</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QPushButton" name="btn_vip_3">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2e1a1a; /* İçi koyu kırmızımsı */
+    color: #ff9f43; /* Yazılar NEON TURUNCU/AMBER */
+    border: 3px solid #ff9f43; /* Kenarlık AMBER */
+    border-radius: 12px;
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #ff9f43; /* Üzerine gelince içi dolsun */
+    color: #2e1a1a; /* Yazı koyulaşsın */
+    border: 3px solid #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>VİP ODA 3</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/crown.png</normaloff>../../Downloads/crown.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="btn_vip_2">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #2e1a1a; /* İçi koyu kırmızımsı */
+    color: #ff9f43; /* Yazılar NEON TURUNCU/AMBER */
+    border: 3px solid #ff9f43; /* Kenarlık AMBER */
+    border-radius: 12px;
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #ff9f43; /* Üzerine gelince içi dolsun */
+    color: #2e1a1a; /* Yazı koyulaşsın */
+    border: 3px solid #ffffff;
+}</string>
+         </property>
+         <property name="text">
+          <string>VİP ODA 2</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/crown.png</normaloff>../../Downloads/crown.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>30</width>
+           <height>30</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="btn_masa_5">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 5</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_masa_1">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>150</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+    background-color: #1a1a2e; /* İçerisi karanlık */
+    color: #00d2ff; /* Yazılar NEON MAVİ */
+    border: 3px solid #00d2ff; /* Kenarlıklar NEON MAVİ */
+    border-radius: 12px; /* Hafif köşeli */
+    font-family: &quot;Segoe UI Black&quot;; /* Kalın, bloklu font */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    /* Üzerine gelince içi dolsun ve parlasın */
+    background-color: #00d2ff; 
+    color: #0f0c29; /* Yazı koyulaşsın ki okunsun */
+    border: 3px solid #ffffff; /* Kenarlık beyaza dönsün, parlama efekti */
+}
+
+QPushButton:pressed {
+    background-color: #008fb3; /* Tıklama efekti */
+}</string>
+         </property>
+         <property name="text">
+          <string>Masa 1</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>../../Downloads/game-console.png</normaloff>../../Downloads/game-console.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>60</width>
+           <height>40</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1136</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

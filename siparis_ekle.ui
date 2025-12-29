@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>454</width>
+    <height>371</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SİPARİŞ MENÜSÜ</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Ana Pencere */
+QDialog {
+    background-color: #0f0c29; /* Koyu Mor/Siyah */
+}
+
+/* Masa Seçim Kutusu (ComboBox) - ZOR KISIMDIR, BUNU KULLAN */
+QComboBox {
+    background-color: #1a1a2e;
+    color: #ffd700; /* Altın Sarısı Yazı */
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+QComboBox::drop-down {
+    border: none; /* Ok işaretinin kenarlığı olmasın */
+}
+QComboBox QAbstractItemView {
+    background-color: #1a1a2e; /* Açılan listenin rengi */
+    color: #ffd700;
+    selection-background-color: #ffd700;
+    selection-color: black;
+}
+
+/* Ürün Butonları (Çay, Kahve vs.) */
+QPushButton {
+    background-color: #1a1a2e;
+    color: #00d2ff; /* Neon Mavi */
+    border: 2px solid #00d2ff;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    min-height: 40px; /* Butonlar dolgun olsun */
+}
+QPushButton:hover {
+    background-color: #00d2ff;
+    color: black;
+}
+
+/* Alt Bilgi Yazısı (Sipariş Bekleniyor...) */
+QLabel {
+    color: #ffffff;
+    font-size: 14px;
+    font-style: italic;
+    qproperty-alignment: AlignCenter;
+}
+
+/* --- YENİ KAPAT BUTONU (Kırmızı/Turuncu) --- */
+QPushButton#btn_kapat {
+    background-color: #2e1a1a;
+    color: #ff4757; /* Kırmızımsı */
+    border: 2px solid #ff4757;
+    margin-top: 10px; /* Üsttekilere yapışmasın */
+}
+QPushButton#btn_kapat:hover {
+    background-color: #ff4757;
+    color: white;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QComboBox" name="cmb_masalar">
+       <item>
+        <property name="text">
+         <string>MASA SEÇİNİZ</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_cay">
+         <property name="text">
+          <string>çay(10tl)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QPushButton" name="btn_kahve">
+         <property name="text">
+          <string>kahve(25tl)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="btn_tost">
+         <property name="text">
+          <string>tost(50tk)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="btn_kola">
+         <property name="text">
+          <string>kola(30tl)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_sonuc">
+       <property name="text">
+        <string>SİPARİS BEKLENİYOR...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_kapat">
+       <property name="text">
+        <string>SİPARİŞİ TAMAMLA</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

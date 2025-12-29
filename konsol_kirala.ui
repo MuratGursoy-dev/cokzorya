@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1059</width>
+    <height>577</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* === ANA PENCERE === */
+QDialog {
+    background-color: #0f0c29; /* Derin Uzay Siyahı */
+}
+
+/* === BAŞLIK YAZISI (Tablonun Üstü) === */
+QLabel {
+    color: #00d2ff; /* Neon Mavi */
+    font-family: &quot;Segoe UI Black&quot;;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* === SOL TARAFTAKİ KUTULAR (Inputlar) === */
+QLineEdit {
+    background-color: #1a1a2e;
+    color: white;
+    border: 2px solid #4b0082; /* Mor Çerçeve */
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 25px;
+}
+QLineEdit:focus {
+    border: 2px solid #ff00cc; /* Tıklayınca Pembe */
+}
+
+/* === AÇILIR KUTU (Combo Box) === */
+QComboBox {
+    background-color: #1a1a2e;
+    color: #ffd700; /* Altın Sarısı */
+    border: 2px solid #ffd700;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+QComboBox QAbstractItemView {
+    background-color: #1a1a2e;
+    color: #ffd700;
+    selection-background-color: #ffd700;
+    selection-color: black;
+}
+
+/* === TABLO (En Havalı Kısım) === */
+QTableWidget {
+    background-color: #151030; /* Çok koyu mor */
+    color: white; /* Tablo yazıları beyaz */
+    gridline-color: #4b0082; /* Çizgiler Mor */
+    border: 2px solid #00d2ff; /* Dış Çerçeve Mavi */
+    selection-background-color: #ff00cc; /* Seçili satır Pembe */
+    selection-color: white;
+}
+/* Tablonun Başlıkları (Header) */
+QHeaderView::section {
+    background-color: #050510; /* Simsiyah başlık */
+    color: #00ff00; /* Başlık yazıları Yeşil */
+    padding: 5px;
+    border: 1px solid #4b0082;
+    font-weight: bold;
+}
+
+/* === BUTONLAR (Renk Kodlu) === */
+
+/* KİRALA (Yeşil - Onay) */
+QPushButton#btn_kirala {
+    background-color: #1a1a2e;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 15px;
+}
+QPushButton#btn_kirala:hover { background-color: #00ff00; color: black; }
+
+/* TESLİM AL (Kırmızı/Turuncu - Bitir) */
+QPushButton#btn_teslim {
+    background-color: #1a1a2e;
+    color: #ff4757;
+    border: 2px solid #ff4757;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+QPushButton#btn_teslim:hover { background-color: #ff4757; color: white; }
+
+/* GEÇMİŞ (Mavi - Bilgi) */
+QPushButton#btn_gecmis {
+    background-color: #1a1a2e;
+    color: #00d2ff;
+    border: 2px solid #00d2ff;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+QPushButton#btn_gecmis:hover { background-color: #00d2ff; color: black; }</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout" columnstretch="1,4">
+   <item row="0" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Müşteri Adı:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_musteri"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Telefon Numarası:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_tel"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Konsol Seçimi:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cmb_konsol">
+       <item>
+        <property name="text">
+         <string>PS5</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>PS4</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Süre</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_gun_sayisi"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Ücret</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="txt_ucret"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_kirala">
+       <property name="text">
+        <string>Kirala</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>ŞU AN KİRADAKİ CİHAZLAR </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="tbl_kiradakiler">
+       <column>
+        <property name="text">
+         <string>Müşteri</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Tel</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Konsol</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Süre</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Tarih</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Ücret</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string/>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btn_teslim">
+         <property name="text">
+          <string>TESLİM AL (KAYDI SİL)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_gecmis">
+         <property name="text">
+          <string>Geçmiş Kiralamalar</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
